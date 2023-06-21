@@ -1,8 +1,8 @@
-const ctrlReservas = {};
+const ctrlReserva = {};
 const Reserva = require('../models/Reserva');
 
 
-ctrlReservas.crearReserva = async (req,res) => {
+ctrlReserva.crearReserva = async (req,res) => {
     const { nombre, apellido, fecha } = req.body;
     try {
     const nuevaReserva = new Reserva({
@@ -147,4 +147,4 @@ ctrlReserva.eliminarReserva = async (req, res) => {
 
 }
 
-module.exports = ctrlReservas;
+module.exports = ctrlReserva;

@@ -7,7 +7,13 @@ require('dotenv').config();
 const {sequelize} = require('./database');
 require('ejs');
 
+const port = process.env.PORT || 4000;
+
 const app = express();
+sequelize.authenticate()
+    .then(() => console.log('Conexión a base de datos exitosa'))
+    .catch((error) => console.log('Error al conectar a base de datos', error));
+
 
 // Middlewares
 app.use(cors());
@@ -18,28 +24,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('view engine', 'ejs');
-
 // Routes
-app.use(require('./routes/reserva.routes'));
+app.use(require('./routes/index.routes'));
 
-
-app.use((req, res, next) => {
-    res.write(`<div>
-        <h1>404 - Ruta no encontrada</h1>
-        <hr>
-        <p>La pagina que intentas buscar no existe</p>
-        <p>Redireccionando a la página de inicio...</p>
-        <script>
-        (
-          () => setTimeout(() => {
-            window.location.href='http://localhost:${port}/tareas';
-           }, 3000)           
-        )();
-        </script>
-    </h1>`)
-});
 
 
 
 // Starting the server
-app.listen(45635, () => console.log('Servidor corriendo en puerto 3000'));
+app.listen(4000, () => console.log('Servidor corriendo en puerto 4000'));

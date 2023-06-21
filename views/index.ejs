@@ -1,30 +1,18 @@
-<%- include('partials/header') %>
+<%- include('partials/header')  %>
 
     <div class="container">
-
         <div class="row mt-5">
-            <h1 class="text-center border-botton">Lista de Reservas</h1>
-            <div class="col">
-                <div class="col-md-3 mb-2">
-                    <a href="/reserva/crear" class="btn btn sm btn-primary" id>Nuevo </a>
-                    <a href="/" class="btn btn-info text-light">Inicio</a>
-                </div>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Columna 1</th>
-                            <th>Columna 2</th>
-                            <th>Columna 3</th>
-                            <th>Columna n</th>
-                        </tr>
-                    </thead>
-                    <tbody id="">
-          
-                    </tbody>
-                </table>
+            <div class="col-md-6 mx-auto">
+                <h1>Bienvenid@!!!</h1>
+                <h2>Seleccione un módulo</h2>
+                <hr>
+                <a href="/crear_reserva" class="btn btn-outline-primary">Reservas</a>
+                <a href="/usuarios" class="btn btn-outline-success">Usuarios</a>
+                <a href="/login" class="btn btn-outline-warning">Login</a>
+                <a href="/register" class="btn btn-outline-danger">Registro</a>
             </div>
         </div>
     </div>
 
 
-    <%- include('partials/footer') %>
+   <%- include('partials/footer')  %>

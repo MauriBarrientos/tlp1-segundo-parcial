@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+
+
+
+<div class="container mt-5">
+        <div class="row">
+
+            <div class="row mb-2">
+                <div class="col-md-5">
+                    <a href="./reserva/" id="btnRegresar" class="btn btn-sm btn-primary">Regresar</a>
+                    <a href="/" class="btn btn-sm btn-info text-light">Inicio</a>
+                </div>
+            </div>
+            
+            <div class="mx-auto col-sm-9 col-md-6 col-lg-5 col-xl-4">
+                <form action="#" id="formNuevaReserva" class="rounded border p-3">
+                    <h3 class="mb-3 text-center bg-primary text-light rounded p-2">Nueva Reserva</h3>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="apellido" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="apellido" name="apellido">
+                    </div>
+                    <div class="mb-3">
+                        <label for="fecha" class="form-label">Fecha</label>
+                        <input type="date" class="form-control" id="fecha" name="fecha">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <%- include('partials/footer') %>
