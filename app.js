@@ -4,7 +4,7 @@ const cors = require('cors');
 const express = require('express');
 const path = require('path');
 require('dotenv').config();
-const {sequelize} = require('./db');
+const {sequelize} = require('./database');
 require('ejs');
 
 const app = express();

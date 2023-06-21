@@ -1,4 +1,4 @@
-const { sequelize, DataTypes } = require('../db');
+const { sequelize, DataTypes } = require('../database');
 
 const Reserva = sequelize.define('Reserva', {
     nombre: {
@@ -32,7 +32,7 @@ const Reserva = sequelize.define('Reserva', {
     createdAt: true,
     updatedAt: true,
     deletedAt: true,
-    tableName: 'reservas'
+    tableName: 'reservadb'
 });
 
 // Crear tabla si no existe
