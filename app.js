@@ -1,9 +1,11 @@
 // Imports
+const morgan = require('morgan');
 const cors = require('cors');
 const express = require('express');
 const path = require('path');
 require('dotenv').config();
 const {sequelize} = require('./db');
+require('ejs');
 
 const app = express();
 
@@ -14,6 +16,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.set('view engine', 'ejs');
 
 // Routes
 app.use(require('./routes/reserva.routes'));
@@ -36,5 +40,6 @@ app.use((req, res, next) => {
 });
 
 
+
 // Starting the server
-app.listen(45635, () => console.log('Server on port xxxx'));
+app.listen(45635, () => console.log('Servidor corriendo en puerto 3000'));
